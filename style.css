@@ -1,0 +1,72 @@
+/* *{
+    border: solid;
+} */
+.grid figure{
+    width: 90%;
+    display: grid;
+    place-items: center;
+}
+.grid img{
+    place-items: center;
+    width: 90%;
+    border-radius: 20%;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: space-evenly;
+    place-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.grid figcaption{
+    width: 90%;
+    text-align: center;
+    background-color: rgb(118, 131, 118);
+    font: bold;
+    color: rgb(0, 238, 255);
+}
+
+@media screen and (min-width:772px) {
+    .grid {
+        grid-template-columns: 45% 45%;
+    }
+    .grid figure:last-child{
+        grid-column: span 2;
+    }
+    .grid figure{
+        border-radius: 50%;
+    }
+    .grid img{
+    border-radius: 50%;
+    }
+}
+@media screen and (min-width:992px) {
+    .grid figure:nth-child(3n){
+        grid-column: span 2;
+    }
+    .grid figure{
+        border-radius: 0%;
+    }
+    .grid img{
+    border-radius: 0%;
+    }
+}
+@media screen and (prefers-reduced-motion) {
+  *{
+    animation: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+    .grid figure{
+        background-color: black;
+        border: solid;
+        border-color: black;
+    }
+    body{
+        background-color: rgb(41, 8, 3);
+    }
+    .grid figcaption{
+       color: rgb(241, 240, 131);
+    }
+}
